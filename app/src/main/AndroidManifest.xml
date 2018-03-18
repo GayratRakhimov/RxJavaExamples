@@ -11,14 +11,16 @@
         android:theme="@style/AppTheme">
         <activity android:name=".examples.Example0Activity" />
         <activity android:name=".examples.Example1Activity" />
-        <activity android:name=".tasks.Task1Activity"></activity>
-        <activity android:name=".examples.Example2Activity"></activity>
+        <activity android:name=".tasks.Task1Activity" />
+        <activity android:name=".examples.Example2Activity" />
         <activity android:name=".tasks.Task2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".examples.Example3Activity"></activity>
     </application>
 
 </manifest>

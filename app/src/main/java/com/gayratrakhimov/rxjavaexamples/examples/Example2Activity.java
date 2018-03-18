@@ -57,11 +57,11 @@ public class Example2Activity extends AppCompatActivity {
         //observableRange.subscribe(observer);
 
         // Observable created using interval() method
-        Observable observableInterval = Observable.interval(2, TimeUnit.SECONDS);
+        Observable observableInterval = Observable.interval(1, TimeUnit.SECONDS);
         //observableInterval.subscribe(observer);
 
         // Observable created using timer() method
-        Observable observableTimer = Observable.timer(5, TimeUnit.SECONDS);
+        Observable observableTimer = Observable.timer(3, TimeUnit.SECONDS);
         //observableTimer.subscribe(observer);
 
         // Observable created using create() method

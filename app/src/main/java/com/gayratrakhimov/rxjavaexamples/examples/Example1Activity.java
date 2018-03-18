@@ -31,7 +31,7 @@ public class Example1Activity extends AppCompatActivity {
 
             @Override
             public void onNext(Object o) {
-                Log.d("RxJavaTag", "onNext:"+o);
+                Log.d("RxJavaTag", "onNext: "+o);
             }
 
             @Override
@@ -45,7 +45,7 @@ public class Example1Activity extends AppCompatActivity {
             }
         };
 
-        // Observer subscribes to Observable
+        // Observer subscribes to Observable to consume items
         observable.subscribe(observer);
 
     }

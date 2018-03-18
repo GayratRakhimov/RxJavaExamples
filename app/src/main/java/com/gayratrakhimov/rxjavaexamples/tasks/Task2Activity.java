@@ -84,7 +84,15 @@ public class Task2Activity extends AppCompatActivity {
             }
         });
         x = x + 3;
-        observableDefer.subscribe(observer);
+        // observableDefer.subscribe(observer);
+
+        Observable observableCallable = Observable.fromCallable(new Callable() {
+            @Override
+            public Object call() throws Exception {
+                return 5;
+            }
+        });
+        observableCallable.subscribe(observer);
 
     }
 }

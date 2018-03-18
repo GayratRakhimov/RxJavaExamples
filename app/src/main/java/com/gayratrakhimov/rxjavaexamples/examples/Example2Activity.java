@@ -99,6 +99,14 @@ public class Example2Activity extends AppCompatActivity {
         name = "Gayrat";
         //observableDefer.subscribe(observer);
 
+        Observable observableCallable = Observable.fromCallable(new Callable() {
+            @Override
+            public Object call() throws Exception {
+                return "Hello from Callable!";
+            }
+        });
+        // observableCallable.subscribe(observer);
+
     }
 
 }

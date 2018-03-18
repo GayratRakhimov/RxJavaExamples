@@ -51,6 +51,8 @@ public class Task1Activity extends AppCompatActivity {
             }
         };
 
+        observable.subscribe(observer);
+
     }
 
 }

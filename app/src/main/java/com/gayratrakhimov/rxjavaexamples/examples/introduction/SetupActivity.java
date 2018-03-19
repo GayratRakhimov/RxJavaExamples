@@ -1,4 +1,4 @@
-package com.gayratrakhimov.rxjavaexamples.examples;
+package com.gayratrakhimov.rxjavaexamples.examples.introduction;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.util.Log;
 import io.reactivex.Observable;
 import io.reactivex.functions.Consumer;
 
-public class Example0Activity extends AppCompatActivity {
+public class SetupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

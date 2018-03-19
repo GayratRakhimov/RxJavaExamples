@@ -1,4 +1,4 @@
-package com.gayratrakhimov.rxjavaexamples.examples;
+package com.gayratrakhimov.rxjavaexamples.examples.observable;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,7 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class Example1Activity extends AppCompatActivity {
+public class ObservableObserverActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

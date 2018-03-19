@@ -20,7 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".examples.Example3Activity"></activity>
+        <activity android:name=".examples.Example3Activity" />
+        <activity android:name=".examples.operators.AggregateOperatorsActivity" />
+        <activity android:name=".examples.operators.AsyncOperatorsActivity" />
+        <activity android:name=".examples.operators.BlockingOperatorsActivity" />
+        <activity android:name=".examples.operators.BooleanOperatorsActivity" />
+        <activity android:name=".examples.operators.CombiningOperatorsActivity" />
+        <activity android:name=".examples.operators.ConditionalOperatorsActivity" />
+        <activity android:name=".examples.operators.FilteringOperatorsActivity" />
+        <activity android:name=".examples.operators.MathematicalOperatorsActivity" />
+        <activity android:name=".examples.operators.StringOperatorsActivity" />
+        <activity android:name=".examples.operators.TransformingOperatorsActivity" />
+        <activity android:name=".examples.operators.UtilityOperatorsActivity"></activity>
     </application>
 
 </manifest>

@@ -11,12 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".examples.introduction.SetupActivity" />
         <activity android:name=".examples.observable.ObservableObserverActivity" />
-        <activity android:name=".tasks.Task1Activity" />
-        <activity android:name=".examples.observable.ObservableCreationActivity" />
-        <activity android:name=".tasks.Task2Activity">
+        <activity android:name=".examples.observable.ObservableCreationActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -29,7 +26,7 @@
         <activity android:name=".examples.operators.FilteringOperatorsActivity" />
         <activity android:name=".examples.operators.MathematicalOperatorsActivity" />
         <activity android:name=".examples.operators.StringOperatorsActivity" />
-        <activity android:name=".examples.operators.TransformingOperatorsActivity" />
+        <activity android:name=".examples.operators.TransformingOperatorsActivity"/>
         <activity android:name=".examples.operators.UtilityOperatorsActivity" />
     </application>
 

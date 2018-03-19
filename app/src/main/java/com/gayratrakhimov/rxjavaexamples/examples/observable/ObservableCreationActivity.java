@@ -45,7 +45,7 @@ public class ObservableCreationActivity extends AppCompatActivity {
             }
         };
 
-        // Observable created using just() method
+        // just
         Observable observableJust = Observable.just(1, 2, 3);
         //observableJust.subscribe(observer);
 
@@ -96,13 +96,17 @@ public class ObservableCreationActivity extends AppCompatActivity {
         name = "Gayrat";
         //observableDefer.subscribe(observer);
 
-        Observable observableCallable = Observable.fromCallable(new Callable() {
+        String[] array = {"Marshmallow", "Nougat", "Oreo"};
+        Observable observableFromArray = Observable.fromArray(array);
+//        observableFromArray.subscribe(observer);
+
+        Observable observableFromCallable = Observable.fromCallable(new Callable() {
             @Override
             public Object call() throws Exception {
                 return "Hello from Callable!";
             }
         });
-        // observableCallable.subscribe(observer);
+        // observableFromCallable.subscribe(observer);
 
     }
 

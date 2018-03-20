@@ -16,17 +16,19 @@
         <activity android:name=".examples.operators.AsyncOperatorsActivity" />
         <activity android:name=".examples.operators.BlockingOperatorsActivity" />
         <activity android:name=".examples.operators.BooleanOperatorsActivity" />
-        <activity android:name=".examples.operators.CombiningOperatorsActivity" />
+        <activity android:name=".examples.operators.CombiningOperatorsActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".examples.operators.ConditionalOperatorsActivity" />
         <activity android:name=".examples.operators.FilteringOperatorsActivity" />
         <activity android:name=".examples.operators.MathematicalOperatorsActivity" />
         <activity android:name=".examples.operators.StringOperatorsActivity" />
         <activity android:name=".examples.operators.UtilityOperatorsActivity" />
         <activity android:name=".examples.operators.transforming.TransformingOperators1Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".examples.operators.transforming.TransformingOperators2Activity"></activity>
         <activity android:name=".examples.operators.transforming.TransformingOperators3Activity">

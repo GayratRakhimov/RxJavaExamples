@@ -1,4 +1,4 @@
-package com.gayratrakhimov.rxjavaexamples.examples.observable;
+package com.gayratrakhimov.rxjavaexamples.examples.introduction;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

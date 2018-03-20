@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".examples.introduction.SetupActivity" />
-        <activity android:name=".examples.observable.ObservableObserverActivity" />
+        <activity android:name=".examples.introduction.ObservableObserverActivity" />
         <activity android:name=".examples.operators.CreatingOperatorsActivity" />
         <activity android:name=".examples.operators.AggregateOperatorsActivity" />
         <activity android:name=".examples.operators.AsyncOperatorsActivity" />

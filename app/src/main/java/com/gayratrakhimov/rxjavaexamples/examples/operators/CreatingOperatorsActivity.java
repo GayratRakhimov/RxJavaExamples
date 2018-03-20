@@ -1,4 +1,4 @@
-package com.gayratrakhimov.rxjavaexamples.examples.observable;
+package com.gayratrakhimov.rxjavaexamples.examples.operators;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +15,7 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
 
-public class ObservableCreationActivity extends AppCompatActivity {
+public class CreatingOperatorsActivity extends AppCompatActivity {
 
     String name = "";
 

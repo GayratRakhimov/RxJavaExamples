@@ -21,14 +21,15 @@
         <activity android:name=".examples.operators.FilteringOperatorsActivity" />
         <activity android:name=".examples.operators.MathematicalOperatorsActivity" />
         <activity android:name=".examples.operators.StringOperatorsActivity" />
-        <activity android:name=".examples.operators.transforming.TransformingOperators1Activity">
-        </activity>
         <activity android:name=".examples.operators.UtilityOperatorsActivity" />
-        <activity android:name=".examples.operators.transforming.TransformingOperators2Activity">
+        <activity android:name=".examples.operators.transforming.TransformingOperators1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".examples.operators.transforming.TransformingOperators2Activity"></activity>
+        <activity android:name=".examples.operators.transforming.TransformingOperators3Activity">
         </activity>
     </application>
 

@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import java.util.concurrent.TimeUnit;
-
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -102,11 +100,6 @@ public class TransformingOperators1Activity extends AppCompatActivity {
         // buffer
 //        observable = Observable.interval(1, TimeUnit.SECONDS).buffer(3);
 
-        // window
-        observable = Observable.interval(1, TimeUnit.SECONDS).window(3);
-
-        // cast
-
         final Observer observer = new Observer() {
             @Override
             public void onSubscribe(Disposable d) {
@@ -115,10 +108,6 @@ public class TransformingOperators1Activity extends AppCompatActivity {
 
             @Override
             public void onNext(Object o) {
-                if(o instanceof Observable){
-
-                }
-                Observable observable2 = (Observable) o;
                 Log.d("RxJavaTag", "onNext: " + o);
             }
 

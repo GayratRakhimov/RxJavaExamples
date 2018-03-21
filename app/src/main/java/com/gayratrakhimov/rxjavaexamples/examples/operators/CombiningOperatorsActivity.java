@@ -30,6 +30,7 @@ public class CombiningOperatorsActivity extends AppCompatActivity {
         });
 
         // startWith
+
         // merge
         // mergeDelayError
         // and, then, when

@@ -25,12 +25,13 @@
         <activity android:name=".examples.operators.transforming.TransformingOperators2Activity" />
         <activity android:name=".examples.operators.transforming.TransformingOperators3Activity" />
         <activity android:name=".examples.operators.combining.CombiningOperators1Activity"></activity>
-        <activity android:name=".examples.operators.combining.CombiningOperators2Activity">
+        <activity android:name=".examples.operators.combining.CombiningOperators2Activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".examples.operators.combining.CombiningOperators3Activity"></activity>
     </application>
 
 </manifest>

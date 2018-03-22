@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.BiFunction;
 
 
 public class CombiningOperators1Activity extends AppCompatActivity {
@@ -23,7 +22,7 @@ public class CombiningOperators1Activity extends AppCompatActivity {
         Observable observableError = Observable.error(new Throwable("Error happened"));
 
         // startWith
-//        Observable observable3 = observable1.startWith(observable2);
+        Observable observable3 = observable1.startWith(observable2);
 
         // merge #1
 //        Observable observable3 = Observable.merge(observable1, observable2);
@@ -49,14 +48,12 @@ public class CombiningOperators1Activity extends AppCompatActivity {
 //        });
 
         // combineLatest
-        Observable observable3 = Observable.combineLatest(observable1, observable2, new BiFunction() {
-            @Override
-            public Object apply(Object o, Object o2) throws Exception {
-                return o + " - " + o2;
-            }
-        });
-
-        // switchOnNext
+//        Observable observable3 = Observable.combineLatest(observable1, observable2, new BiFunction() {
+//            @Override
+//            public Object apply(Object o, Object o2) throws Exception {
+//                return o + " - " + o2;
+//            }
+//        });
 
         final Observer observer = new Observer() {
             @Override

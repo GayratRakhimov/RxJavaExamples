@@ -47,13 +47,13 @@ public class CombiningOperators2Activity extends AppCompatActivity {
 //                new Function<String, ObservableSource<Long>>() {
 //                    @Override
 //                    public ObservableSource<Long> apply(String s) throws Exception {
-//                        return Observable.timer(2, TimeUnit.SECONDS);
+//                        return Observable.timer(1, TimeUnit.SECONDS);
 //                    }
 //                },
 //                new Function<String, ObservableSource<Long>>() {
 //                    @Override
 //                    public ObservableSource<Long> apply(String s) throws Exception {
-//                        return Observable.timer(1, TimeUnit.SECONDS);
+//                        return Observable.timer(2, TimeUnit.SECONDS);
 //                    }
 //                },
 //                new BiFunction<String, String, Object>() {
@@ -69,13 +69,13 @@ public class CombiningOperators2Activity extends AppCompatActivity {
                 new Function<String, ObservableSource<Long>>() {
                     @Override
                     public ObservableSource<Long> apply(String s) throws Exception {
-                        return Observable.timer(2, TimeUnit.SECONDS);
+                        return Observable.timer(1, TimeUnit.SECONDS);
                     }
                 },
                 new Function<String, ObservableSource<Long>>() {
                     @Override
                     public ObservableSource<Long> apply(String s) throws Exception {
-                        return Observable.timer(1, TimeUnit.SECONDS);
+                        return Observable.timer(2, TimeUnit.SECONDS);
                     }
                 },
                 new BiFunction<String, Observable<String>, Object>() {
@@ -84,7 +84,7 @@ public class CombiningOperators2Activity extends AppCompatActivity {
                         return rs.toList().subscribe(new Consumer<List<String>>() {
                             @Override
                             public void accept(List<String> strings) throws Exception {
-                                Log.d("RxJavaTag", strings.toArray().toString());
+                                Log.d("RxJavaTag", strings.toString());
                             }
                         });
                     }

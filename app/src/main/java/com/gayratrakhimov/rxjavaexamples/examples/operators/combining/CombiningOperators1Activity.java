@@ -56,6 +56,8 @@ public class CombiningOperators1Activity extends AppCompatActivity {
             }
         });
 
+        // switchOnNext
+
         final Observer observer = new Observer() {
             @Override
             public void onSubscribe(Disposable d) {

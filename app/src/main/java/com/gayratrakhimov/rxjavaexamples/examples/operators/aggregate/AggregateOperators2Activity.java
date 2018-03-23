@@ -6,9 +6,12 @@ import android.util.Log;
 
 import com.gayratrakhimov.rxjavaexamples.R;
 
-import io.reactivex.Maybe;
+import java.util.ArrayList;
+import java.util.concurrent.Callable;
+
 import io.reactivex.Observable;
-import io.reactivex.functions.BiFunction;
+import io.reactivex.Single;
+import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.Consumer;
 
 public class AggregateOperators2Activity extends AppCompatActivity {
@@ -30,19 +33,37 @@ public class AggregateOperators2Activity extends AppCompatActivity {
 //        });
 
         // reduce
-        Maybe maybe = observable1.reduce(new BiFunction<Integer, Integer, Integer>() {
+//        Maybe maybe = observable1.reduce(new BiFunction<Integer, Integer, Integer>() {
+//            @Override
+//            public Integer apply(Integer integer, Integer integer2) throws Exception {
+//                return integer + integer2;
+//            }
+//        });
+//        maybe.subscribe(new Consumer() {
+//            @Override
+//            public void accept(Object o) throws Exception {
+//                Log.d("RxJavaTag", "accept: " + o);
+//            }
+//        });
+
+        // collect
+        Single single = observable1.collect(new Callable() {
             @Override
-            public Integer apply(Integer integer, Integer integer2) throws Exception {
-                return integer + integer2;
+            public Object call() throws Exception {
+                return new ArrayList<Integer>();
+            }
+        }, new BiConsumer<ArrayList<Integer>, Integer>() {
+            @Override
+            public void accept(ArrayList<Integer> acc, Integer value) throws Exception {
+                acc.add(value);
             }
         });
-        maybe.subscribe(new Consumer() {
+        single.subscribe(new Consumer() {
             @Override
             public void accept(Object o) throws Exception {
                 Log.d("RxJavaTag", "accept: " + o);
             }
         });
-
 
     }
 

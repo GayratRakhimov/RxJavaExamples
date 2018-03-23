@@ -22,11 +22,11 @@ public class CombiningOperators3Activity extends AppCompatActivity {
 
         // switchOnNext
 
-        Observable observable1 = Observable.interval(1, TimeUnit.SECONDS)
+        Observable observable1 = Observable.interval(5, TimeUnit.SECONDS)
                 .map(new Function<Long, Observable>() {
                     @Override
                     public Observable apply(Long aLong) throws Exception {
-                        return Observable.interval(500, TimeUnit.MILLISECONDS);
+                        return Observable.interval(1, TimeUnit.SECONDS);
                     }
                 });
 

@@ -3,16 +3,15 @@ package com.gayratrakhimov.rxjavaexamples.examples.operators.aggregate;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.gayratrakhimov.rxjavaexamples.R;
-
 import io.reactivex.Observable;
+import io.reactivex.Single;
+import io.reactivex.functions.Function;
 
 public class AggregateOperators2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aggregate_operators2);
 
         final Observable<Integer> observable1 = Observable.just(4, 3, 5, 2);
 
@@ -66,6 +65,23 @@ public class AggregateOperators2Activity extends AppCompatActivity {
 //                Log.d("RxJavaTag", "accept: " + o);
 //            }
 //        });
+
+        // toSortedList
+//        Single single = observable1.toSortedList();
+//        single.subscribe(new Consumer() {
+//            @Override
+//            public void accept(Object o) throws Exception {
+//                Log.d("RxJavaTag", "accept: " + o);
+//            }
+//        });
+
+        // toMap
+        Single single = observable1.toMap(new Function<Integer, Object>() {
+            @Override
+            public Object apply(Integer integer) throws Exception {
+                return null;
+            }
+        });
 
     }
 

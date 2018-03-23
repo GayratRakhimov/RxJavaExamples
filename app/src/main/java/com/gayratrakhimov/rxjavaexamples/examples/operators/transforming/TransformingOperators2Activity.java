@@ -5,8 +5,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.gayratrakhimov.rxjavaexamples.R;
-
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -18,7 +16,6 @@ public class TransformingOperators2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transforming_operators2);
 
         Observable observable = Observable.just(4, 3, 5, 2);
 

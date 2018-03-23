@@ -2,17 +2,10 @@ package com.gayratrakhimov.rxjavaexamples.examples.operators.aggregate;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import com.gayratrakhimov.rxjavaexamples.R;
 
-import java.util.ArrayList;
-import java.util.concurrent.Callable;
-
 import io.reactivex.Observable;
-import io.reactivex.Single;
-import io.reactivex.functions.BiConsumer;
-import io.reactivex.functions.Consumer;
 
 public class AggregateOperators2Activity extends AppCompatActivity {
 
@@ -47,23 +40,32 @@ public class AggregateOperators2Activity extends AppCompatActivity {
 //        });
 
         // collect
-        Single single = observable1.collect(new Callable() {
-            @Override
-            public Object call() throws Exception {
-                return new ArrayList<Integer>();
-            }
-        }, new BiConsumer<ArrayList<Integer>, Integer>() {
-            @Override
-            public void accept(ArrayList<Integer> acc, Integer value) throws Exception {
-                acc.add(value);
-            }
-        });
-        single.subscribe(new Consumer() {
-            @Override
-            public void accept(Object o) throws Exception {
-                Log.d("RxJavaTag", "accept: " + o);
-            }
-        });
+//        Single single = observable1.collect(new Callable() {
+//            @Override
+//            public Object call() throws Exception {
+//                return new ArrayList<Integer>();
+//            }
+//        }, new BiConsumer<ArrayList<Integer>, Integer>() {
+//            @Override
+//            public void accept(ArrayList<Integer> acc, Integer value) throws Exception {
+//                acc.add(value);
+//            }
+//        });
+//        single.subscribe(new Consumer() {
+//            @Override
+//            public void accept(Object o) throws Exception {
+//                Log.d("RxJavaTag", "accept: " + o);
+//            }
+//        });
+
+        // toList
+//        Single single = observable1.toList();
+//        single.subscribe(new Consumer() {
+//            @Override
+//            public void accept(Object o) throws Exception {
+//                Log.d("RxJavaTag", "accept: " + o);
+//            }
+//        });
 
     }
 

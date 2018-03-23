@@ -22,7 +22,6 @@ public class AggregateOperators1Activity extends AppCompatActivity {
         // concat
         Observable observable3 = Observable.merge(observable1, observable2);
 
-        // toList
         // toSortedList
         // toMap
         // toMultimap

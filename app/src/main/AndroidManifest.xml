@@ -12,12 +12,6 @@
         <activity android:name=".examples.introduction.SetupActivity" />
         <activity android:name=".examples.introduction.ObservableObserverActivity" />
         <activity android:name=".examples.operators.CreatingOperatorsActivity" />
-        <activity android:name=".examples.operators.AggregateOperatorsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".examples.operators.AsyncOperatorsActivity" />
         <activity android:name=".examples.operators.BlockingOperatorsActivity" />
         <activity android:name=".examples.operators.BooleanOperatorsActivity" />
@@ -29,9 +23,16 @@
         <activity android:name=".examples.operators.transforming.TransformingOperators1Activity" />
         <activity android:name=".examples.operators.transforming.TransformingOperators2Activity" />
         <activity android:name=".examples.operators.transforming.TransformingOperators3Activity" />
-        <activity android:name=".examples.operators.combining.CombiningOperators1Activity"></activity>
-        <activity android:name=".examples.operators.combining.CombiningOperators2Activity"></activity>
-        <activity android:name=".examples.operators.combining.CombiningOperators3Activity"></activity>
+        <activity android:name=".examples.operators.combining.CombiningOperators1Activity" />
+        <activity android:name=".examples.operators.combining.CombiningOperators2Activity" />
+        <activity android:name=".examples.operators.combining.CombiningOperators3Activity" />
+        <activity android:name=".examples.operators.aggregate.AggregateOperators1Activity"></activity>
+        <activity android:name=".examples.operators.aggregate.AggregateOperators2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

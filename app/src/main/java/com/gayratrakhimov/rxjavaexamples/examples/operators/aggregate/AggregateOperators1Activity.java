@@ -1,4 +1,4 @@
-package com.gayratrakhimov.rxjavaexamples.examples.operators;
+package com.gayratrakhimov.rxjavaexamples.examples.operators.aggregate;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,19 +10,18 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class AggregateOperatorsActivity extends AppCompatActivity {
+public class AggregateOperators1Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        final Observable observable1 = Observable.just(4, 3, 5, 2).delay(2, TimeUnit.SECONDS);
+        final Observable observable1 = Observable.just(4, 3, 5, 2);
         final Observable observable2 = Observable.interval(1, TimeUnit.SECONDS);
 
         // concat
         Observable observable3 = Observable.merge(observable1, observable2);
 
-        // count
         // countLong
         // reduce
         // collect

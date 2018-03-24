@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".examples.introduction.SetupActivity" />
         <activity android:name=".examples.introduction.ObservableObserverActivity" />
-        <activity android:name=".examples.operators.CreatingOperatorsActivity" />
+        <activity android:name=".examples.operators.creating.CreatingOperatorsActivity" />
         <activity android:name=".examples.operators.AsyncOperatorsActivity" />
         <activity android:name=".examples.operators.BlockingOperatorsActivity" />
         <activity android:name=".examples.operators.BooleanOperatorsActivity" />

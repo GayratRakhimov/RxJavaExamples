@@ -1,4 +1,4 @@
-package com.gayratrakhimov.rxjavaexamples.examples.operators;
+package com.gayratrakhimov.rxjavaexamples.examples.operators.creating;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

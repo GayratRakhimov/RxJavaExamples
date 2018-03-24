@@ -26,9 +26,10 @@
         <activity android:name=".examples.operators.combining.CombiningOperators2Activity" />
         <activity android:name=".examples.operators.combining.CombiningOperators3Activity" />
         <activity android:name=".examples.operators.aggregate.AggregateOperators1Activity" />
-        <activity android:name=".examples.operators.aggregate.AggregateOperators2Activity"></activity>
-        <activity android:name=".examples.operators.aggregate.AggregateOperators3Activity"></activity>
-        <activity android:name=".examples.operators.FilteringOperatorsActivity" >
+        <activity android:name=".examples.operators.aggregate.AggregateOperators2Activity" />
+        <activity android:name=".examples.operators.aggregate.AggregateOperators3Activity" />
+        <activity android:name=".examples.operators.filtering.FilteringOperators1Activity"></activity>
+        <activity android:name=".examples.operators.filtering.FilteringOperators2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

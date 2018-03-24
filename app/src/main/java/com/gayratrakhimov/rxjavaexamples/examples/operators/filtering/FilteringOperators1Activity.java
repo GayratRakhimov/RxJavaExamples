@@ -1,4 +1,4 @@
-package com.gayratrakhimov.rxjavaexamples.examples.operators;
+package com.gayratrakhimov.rxjavaexamples.examples.operators.filtering;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,7 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class FilteringOperatorsActivity extends AppCompatActivity {
+public class FilteringOperators1Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

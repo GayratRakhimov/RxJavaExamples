@@ -31,8 +31,17 @@ public class FilteringOperators3Activity extends AppCompatActivity {
         // sample
 //        observable = observable.throttleLast(3, TimeUnit.SECONDS);
 
-        // debounce
-        observable = observable.debounce(1, TimeUnit.SECONDS);
+        // debounce or throttleWithTimeout
+//        observable = Observable.concat(
+//                Observable.interval(1, TimeUnit.SECONDS).take(3),
+//                Observable.interval(3, TimeUnit.SECONDS).take(3));
+//        observable = observable.debounce(2, TimeUnit.SECONDS);
+
+        // timeout
+//        observable = Observable.concat(
+//                Observable.interval(1, TimeUnit.SECONDS).take(3),
+//                Observable.interval(3, TimeUnit.SECONDS).take(3));
+//        observable = observable.timeout(2, TimeUnit.SECONDS);
 
         final Observer observer = new Observer() {
             @Override

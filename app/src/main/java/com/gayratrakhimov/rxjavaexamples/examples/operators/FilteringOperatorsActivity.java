@@ -7,7 +7,6 @@ import android.util.Log;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Predicate;
 
 public class FilteringOperatorsActivity extends AppCompatActivity {
 
@@ -18,15 +17,16 @@ public class FilteringOperatorsActivity extends AppCompatActivity {
         Observable observable1 = Observable.just(5, 3, 2, 4);
 
         // filter
-        Observable observable2 = observable1.filter(new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer integer) throws Exception {
-                return integer >= 4;
-            }
-        });
+//        Observable observable2 = observable1.filter(new Predicate<Integer>() {
+//            @Override
+//            public boolean test(Integer integer) throws Exception {
+//                return integer >= 4;
+//            }
+//        });
 
         // takeLast
-        // last
+        Observable observable2 = observable1.takeLast(2);
+
         // lastOrDefault
         // takeLastBuffer
         // skip

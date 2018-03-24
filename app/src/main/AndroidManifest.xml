@@ -28,13 +28,14 @@
         <activity android:name=".examples.operators.aggregate.AggregateOperators1Activity" />
         <activity android:name=".examples.operators.aggregate.AggregateOperators2Activity" />
         <activity android:name=".examples.operators.aggregate.AggregateOperators3Activity" />
-        <activity android:name=".examples.operators.filtering.FilteringOperators1Activity"></activity>
-        <activity android:name=".examples.operators.filtering.FilteringOperators2Activity"></activity>
-        <activity android:name=".examples.operators.filtering.FilteringOperators3Activity">
+        <activity android:name=".examples.operators.filtering.FilteringOperators1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".examples.operators.filtering.FilteringOperators2Activity"></activity>
+        <activity android:name=".examples.operators.filtering.FilteringOperators3Activity">
         </activity>
     </application>
 

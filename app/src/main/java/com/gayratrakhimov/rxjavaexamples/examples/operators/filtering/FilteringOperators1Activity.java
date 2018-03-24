@@ -14,7 +14,7 @@ public class FilteringOperators1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Observable observable1 = Observable.just(5, 3, 2, 4);
+        Observable observable1 = Observable.just(5, 3, 3, 2);
 
         // filter
 //        Observable observable2 = observable1.filter(new Predicate<Integer>() {
@@ -34,15 +34,19 @@ public class FilteringOperators1Activity extends AppCompatActivity {
 //        Observable observable2 = observable1.skipLast(2);
 
         // take
-        Observable observable2 = observable1.take(1);
+//        Observable observable2 = observable1.take(1);
 
-
-
-        // timeout
         // distinct
+//        Observable observable2 = observable1.distinct();
+
         // distrinctUntilChanged
+//        Observable observable2 = observable1.distinctUntilChanged();
+
         // ofType
+//        Observable observable2 = observable1.ofType(Integer.class);
+
         // ignoreElements
+        Observable observable2 = observable1.ignoreElements().toObservable();
 
         final Observer observer = new Observer() {
             @Override

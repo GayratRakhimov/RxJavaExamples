@@ -36,8 +36,6 @@ public class FilteringOperators1Activity extends AppCompatActivity {
         // take
         Observable observable2 = observable1.take(1);
 
-        // sample or throttleLast
-        // throttleFirst
         // throttleWithTimeout or debounce
         // timeout
         // distinct

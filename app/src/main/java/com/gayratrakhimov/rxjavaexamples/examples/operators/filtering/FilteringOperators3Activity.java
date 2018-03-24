@@ -17,8 +17,22 @@ public class FilteringOperators3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Observable observable = Observable.interval(1, TimeUnit.SECONDS);
-        observable = observable.sample(3, TimeUnit.SECONDS);
+        Observable observable = Observable.interval(2, TimeUnit.SECONDS);
+
+        // sample
+//        observable = observable.sample(3, TimeUnit.SECONDS);
+
+        // throttleLast
+//        observable = observable.throttleLast(3, TimeUnit.SECONDS);
+
+        // throttleFirst
+//        observable = observable.throttleFirst(3, TimeUnit.SECONDS);
+
+        // sample
+//        observable = observable.throttleLast(3, TimeUnit.SECONDS);
+
+        // debounce
+        observable = observable.debounce(1, TimeUnit.SECONDS);
 
         final Observer observer = new Observer() {
             @Override

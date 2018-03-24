@@ -36,7 +36,6 @@ public class FilteringOperators1Activity extends AppCompatActivity {
         // take
         Observable observable2 = observable1.take(1);
 
-        // firstOrDefault
         // elementAt
         // elementAtOrDefault
         // sample or throttleLast

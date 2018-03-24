@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import io.reactivex.Observable;
-import io.reactivex.Single;
-import io.reactivex.functions.Function;
 
 public class AggregateOperators2Activity extends AppCompatActivity {
 
@@ -74,14 +72,6 @@ public class AggregateOperators2Activity extends AppCompatActivity {
 //                Log.d("RxJavaTag", "accept: " + o);
 //            }
 //        });
-
-        // toMap
-        Single single = observable1.toMap(new Function<Integer, Object>() {
-            @Override
-            public Object apply(Integer integer) throws Exception {
-                return null;
-            }
-        });
 
     }
 

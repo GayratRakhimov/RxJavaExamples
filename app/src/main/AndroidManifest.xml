@@ -16,7 +16,6 @@
         <activity android:name=".examples.operators.BlockingOperatorsActivity" />
         <activity android:name=".examples.operators.BooleanOperatorsActivity" />
         <activity android:name=".examples.operators.ConditionalOperatorsActivity" />
-        <activity android:name=".examples.operators.FilteringOperatorsActivity" />
         <activity android:name=".examples.operators.MathematicalOperatorsActivity" />
         <activity android:name=".examples.operators.StringOperatorsActivity" />
         <activity android:name=".examples.operators.UtilityOperatorsActivity" />
@@ -27,9 +26,9 @@
         <activity android:name=".examples.operators.combining.CombiningOperators2Activity" />
         <activity android:name=".examples.operators.combining.CombiningOperators3Activity" />
         <activity android:name=".examples.operators.aggregate.AggregateOperators1Activity" />
-        <activity android:name=".examples.operators.aggregate.AggregateOperators2Activity">
-        </activity>
-        <activity android:name=".examples.operators.aggregate.AggregateOperators3Activity">
+        <activity android:name=".examples.operators.aggregate.AggregateOperators2Activity"></activity>
+        <activity android:name=".examples.operators.aggregate.AggregateOperators3Activity"></activity>
+        <activity android:name=".examples.operators.FilteringOperatorsActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

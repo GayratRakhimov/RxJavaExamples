@@ -4,46 +4,21 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import java.util.concurrent.TimeUnit;
+
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class FilteringOperators1Activity extends AppCompatActivity {
+
+public class FilteringOperators3Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Observable observable1 = Observable.just(5, 3, 2, 4);
-
-        // filter
-//        Observable observable2 = observable1.filter(new Predicate<Integer>() {
-//            @Override
-//            public boolean test(Integer integer) throws Exception {
-//                return integer >= 4;
-//            }
-//        });
-
-        // takeLast
-//        Observable observable2 = observable1.takeLast(2);
-
-        // skip
-//        Observable observable2 = observable1.skip(2);
-
-        // skipLast
-//        Observable observable2 = observable1.skipLast(2);
-
-        // take
-        Observable observable2 = observable1.take(1);
-
-        // sample or throttleLast
-        // throttleFirst
-        // throttleWithTimeout or debounce
-        // timeout
-        // distinct
-        // distrinctUntilChanged
-        // ofType
-        // ignoreElements
+        Observable observable = Observable.interval(1, TimeUnit.SECONDS);
+        observable = observable.sample(3, TimeUnit.SECONDS);
 
         final Observer observer = new Observer() {
             @Override
@@ -67,7 +42,7 @@ public class FilteringOperators1Activity extends AppCompatActivity {
             }
         };
 
-        observable2.subscribe(observer);
+        observable.subscribe(observer);
 
     }
 

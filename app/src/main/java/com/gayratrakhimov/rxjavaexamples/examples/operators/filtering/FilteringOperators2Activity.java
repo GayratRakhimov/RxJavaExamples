@@ -34,6 +34,7 @@ public class FilteringOperators2Activity extends AppCompatActivity {
 //            }
 //        });
 
+        // elementAt
         Single single = observable1.elementAt(1, 6);
         single.subscribe(new Consumer() {
             @Override

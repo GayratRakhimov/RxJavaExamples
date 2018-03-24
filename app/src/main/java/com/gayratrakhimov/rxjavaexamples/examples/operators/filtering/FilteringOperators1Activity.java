@@ -25,14 +25,17 @@ public class FilteringOperators1Activity extends AppCompatActivity {
 //        });
 
         // takeLast
-        Observable observable2 = observable1.takeLast(2);
+//        Observable observable2 = observable1.takeLast(2);
 
-        // lastOrDefault
-        // takeLastBuffer
         // skip
+//        Observable observable2 = observable1.skip(2);
+
         // skipLast
+//        Observable observable2 = observable1.skipLast(2);
+
         // take
-        // first and takeFirst
+        Observable observable2 = observable1.take(1);
+
         // firstOrDefault
         // elementAt
         // elementAtOrDefault

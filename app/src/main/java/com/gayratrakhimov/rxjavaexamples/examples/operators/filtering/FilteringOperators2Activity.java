@@ -16,7 +16,17 @@ public class FilteringOperators2Activity extends AppCompatActivity {
 
         Observable observable1 = Observable.just(5, 3, 2, 4);
 
-        Single single = observable1.last(6);
+        // last
+//        Single single = observable1.last(6);
+//        single.subscribe(new Consumer() {
+//            @Override
+//            public void accept(Object o) throws Exception {
+//                Log.d("RxJavaTag", "accept: " + o);
+//            }
+//        });
+
+        // first
+        Single single = observable1.first(6);
         single.subscribe(new Consumer() {
             @Override
             public void accept(Object o) throws Exception {

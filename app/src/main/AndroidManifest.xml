@@ -15,7 +15,7 @@
         <activity android:name=".examples.operators.AsyncOperatorsActivity" />
         <activity android:name=".examples.operators.BlockingOperatorsActivity" />
         <activity android:name=".examples.operators.BooleanOperatorsActivity" />
-        <activity android:name=".examples.operators.ConditionalOperatorsActivity" />
+
         <activity android:name=".examples.operators.MathematicalOperatorsActivity" />
         <activity android:name=".examples.operators.StringOperatorsActivity" />
         <activity android:name=".examples.operators.transforming.TransformingOperators1Activity" />
@@ -30,16 +30,16 @@
         <activity android:name=".examples.operators.filtering.FilteringOperators1Activity" />
         <activity android:name=".examples.operators.filtering.FilteringOperators2Activity" />
         <activity android:name=".examples.operators.filtering.FilteringOperators3Activity" />
-        <activity android:name=".examples.operators.utility.UtilityOperators1Activity">
+        <activity android:name=".examples.operators.utility.UtilityOperators1Activity"></activity>
+        <activity android:name=".examples.operators.utility.UtilityOperators2Activity" />
+        <activity android:name=".examples.operators.utility.UtilityOperators3Activity" />
+        <activity android:name=".examples.operators.utility.UtilityOperators4Activity"></activity>
+        <activity android:name=".examples.operators.utility.UtilityOperators5Activity"></activity>
+        <activity android:name=".examples.operators.conditional.ConditionalOperators1Activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".examples.operators.utility.UtilityOperators2Activity" />
-        <activity android:name=".examples.operators.utility.UtilityOperators3Activity" />
-        <activity android:name=".examples.operators.utility.UtilityOperators4Activity"></activity>
-        <activity android:name=".examples.operators.utility.UtilityOperators5Activity">
         </activity>
     </application>
 

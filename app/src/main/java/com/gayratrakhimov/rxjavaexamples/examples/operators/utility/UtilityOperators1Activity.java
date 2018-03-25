@@ -4,15 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import java.util.concurrent.Callable;
-
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
 
 public class UtilityOperators1Activity extends AppCompatActivity {
 
@@ -83,45 +77,29 @@ public class UtilityOperators1Activity extends AppCompatActivity {
 //        });
 
         // using
-//        Observable<Character> values = Observable.using(
-//                () -> {
-//                    String resource = "MyResource";
-//                    System.out.println("Leased: " + resource);
-//                    return resource;
-//                },
-//                (resource) -> {
-//                    return Observable.create(o -> {
-//                        for (Character c : resource.toCharArray())
-//                            o.onNext(c);
-//                        o.onCompleted();
-//                    });
-//                },
-//                (resource) -> System.out.println("Disposed: " + resource));
-
-        // using
-        observable = Observable.using(new Callable() {
-            @Override
-            public Object call() throws Exception {
-                String resource = "MyResource";
-                System.out.println("Leased: " + resource);
-                return resource;
-            }
-        }, new Function() {
-            @Override
-            public Object apply(Object o) throws Exception {
-                return Observable.create(new ObservableOnSubscribe<String>() {
-                    @Override
-                    public void subscribe(ObservableEmitter<String> emitter) throws Exception {
-                        emitter.onComplete();
-                    }
-                });
-            }
-        }, new Consumer() {
-            @Override
-            public void accept(Object o) throws Exception {
-                Log.d("RxJavaTag", "Disposed:" + o);
-            }
-        });
+//        observable = Observable.using(new Callable() {
+//            @Override
+//            public Object call() throws Exception {
+//                String resource = "MyResource";
+//                System.out.println("Leased: " + resource);
+//                return resource;
+//            }
+//        }, new Function() {
+//            @Override
+//            public Object apply(Object o) throws Exception {
+//                return Observable.create(new ObservableOnSubscribe<String>() {
+//                    @Override
+//                    public void subscribe(ObservableEmitter<String> emitter) throws Exception {
+//                        emitter.onComplete();
+//                    }
+//                });
+//            }
+//        }, new Consumer() {
+//            @Override
+//            public void accept(Object o) throws Exception {
+//                Log.d("RxJavaTag", "Disposed:" + o);
+//            }
+//        });
 
         // repeat
 //        observable = observable.repeat(3);

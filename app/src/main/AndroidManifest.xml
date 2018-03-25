@@ -27,11 +27,12 @@
         <activity android:name=".examples.operators.aggregate.AggregateOperators1Activity" />
         <activity android:name=".examples.operators.aggregate.AggregateOperators2Activity" />
         <activity android:name=".examples.operators.aggregate.AggregateOperators3Activity" />
-        <activity android:name=".examples.operators.filtering.FilteringOperators1Activity"></activity>
+        <activity android:name=".examples.operators.filtering.FilteringOperators1Activity" />
         <activity android:name=".examples.operators.filtering.FilteringOperators2Activity" />
-        <activity android:name=".examples.operators.filtering.FilteringOperators3Activity"></activity>
+        <activity android:name=".examples.operators.filtering.FilteringOperators3Activity" />
         <activity android:name=".examples.operators.utility.UtilityOperators1Activity"></activity>
-        <activity android:name=".examples.operators.utility.UtilityOperators2Activity">
+        <activity android:name=".examples.operators.utility.UtilityOperators2Activity"></activity>
+        <activity android:name=".examples.operators.utility.UtilityOperators3Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

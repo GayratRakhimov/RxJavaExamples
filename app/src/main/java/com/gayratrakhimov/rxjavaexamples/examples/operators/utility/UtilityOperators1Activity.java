@@ -14,7 +14,7 @@ public class UtilityOperators1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Observable observable = Observable.just(5, 3, 3, 2);
+        Observable observable = Observable.just(5, 3, 3,2);
 
         // materialize
 //         observable = observable.materialize();
@@ -25,16 +25,46 @@ public class UtilityOperators1Activity extends AppCompatActivity {
         // timestamp
 //         observable = observable.timestamp();
 
-        //observable = observable.cache();
-        // cache
-        // observeOn
-        // subscribeOn
-        // doOnEach
+        // doOnEach:
+//        observable = observable.doOnEach(new Consumer<Notification>() {
+//            @Override
+//            public void accept(Notification notification) throws Exception {
+//                Log.d("RxJavaTag", "doOnEach:"+notification.getValue());
+//            }
+//        });
+
         // doOnCompleted
+//        observable = observable.doOnComplete(new Action() {
+//            @Override
+//            public void run() throws Exception {
+//                Log.d("RxJavaTag", "doOnComplete");
+//            }
+//        });
+
         // doOnError
+//        observable = observable.doOnError(new Consumer<Throwable>() {
+//            @Override
+//            public void accept(Throwable throwable) throws Exception {
+//                Log.d("RxJavaTag", "doOnError");
+//            }
+//        });
+
         // doOnTerminate
+//        observable = observable.doOnTerminate(new Action() {
+//            @Override
+//            public void run() throws Exception {
+//                Log.d("RxJavaTag", "doOnTerminate");
+//            }
+//        });
+
         // doOnSubscribe
-        // doOnUnsubscribe
+//        observable = observable.doOnSubscribe(new Consumer<Disposable>() {
+//            @Override
+//            public void accept(Disposable disposable) throws Exception {
+//                Log.d("RxJavaTag", "doOnSubscribe");
+//            }
+//        });
+
         // finallyDo
         // delay
         // delaySubscription

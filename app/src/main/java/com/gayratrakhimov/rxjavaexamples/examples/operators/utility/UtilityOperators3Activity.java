@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.gayratrakhimov.rxjavaexamples.R;
-
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
@@ -18,7 +16,6 @@ public class UtilityOperators3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_utility_operators3);
 
         Observable observable = Observable.interval(1, TimeUnit.SECONDS);
 

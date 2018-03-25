@@ -4,9 +4,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import java.util.concurrent.Callable;
+
 import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
 
 public class UtilityOperators1Activity extends AppCompatActivity {
 
@@ -14,7 +20,7 @@ public class UtilityOperators1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Observable observable = Observable.just(5, 3, 3,2);
+        Observable observable = Observable.just(5, 3, 4, 2);
 
         // materialize
 //         observable = observable.materialize();
@@ -24,6 +30,9 @@ public class UtilityOperators1Activity extends AppCompatActivity {
 
         // timestamp
 //         observable = observable.timestamp();
+
+        // timeInterval
+//        observable = observable.timeInterval();
 
         // doOnEach:
 //        observable = observable.doOnEach(new Consumer<Notification>() {
@@ -65,15 +74,65 @@ public class UtilityOperators1Activity extends AppCompatActivity {
 //            }
 //        });
 
-        // finallyDo
-        // delay
-        // delaySubscription
-        // timeInterval
+        // doFinally
+//        observable = observable.doFinally(new Action() {
+//            @Override
+//            public void run() throws Exception {
+//                Log.d("RxJavaTag", "doFinally");
+//            }
+//        });
+
         // using
-        // single
-        // singleOrDefault
+//        Observable<Character> values = Observable.using(
+//                () -> {
+//                    String resource = "MyResource";
+//                    System.out.println("Leased: " + resource);
+//                    return resource;
+//                },
+//                (resource) -> {
+//                    return Observable.create(o -> {
+//                        for (Character c : resource.toCharArray())
+//                            o.onNext(c);
+//                        o.onCompleted();
+//                    });
+//                },
+//                (resource) -> System.out.println("Disposed: " + resource));
+
+        // using
+        observable = Observable.using(new Callable() {
+            @Override
+            public Object call() throws Exception {
+                String resource = "MyResource";
+                System.out.println("Leased: " + resource);
+                return resource;
+            }
+        }, new Function() {
+            @Override
+            public Object apply(Object o) throws Exception {
+                return Observable.create(new ObservableOnSubscribe<String>() {
+                    @Override
+                    public void subscribe(ObservableEmitter<String> emitter) throws Exception {
+                        emitter.onComplete();
+                    }
+                });
+            }
+        }, new Consumer() {
+            @Override
+            public void accept(Object o) throws Exception {
+                Log.d("RxJavaTag", "Disposed:" + o);
+            }
+        });
+
         // repeat
+//        observable = observable.repeat(3);
+
         // repeatWhen
+//        observable = observable.repeatWhen(new Function<Observable<Object>, ObservableSource<?>>() {
+//            @Override
+//            public ObservableSource<?> apply(Observable<Object> objectObservable) throws Exception {
+//                return objectObservable.delay(3, TimeUnit.SECONDS);
+//            }
+//        });
 
         final Observer observer = new Observer() {
             @Override

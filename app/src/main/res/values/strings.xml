@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RxJavaExamples</string>
+    <string name="title_activity_utility_operators2">UtilityOperators2Activity</string>
 </resources>

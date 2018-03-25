@@ -8,7 +8,7 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class UtilityOperatorsActivity extends AppCompatActivity {
+public class UtilityOperators1Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class UtilityOperatorsActivity extends AppCompatActivity {
         // timestamp
 //         observable = observable.timestamp();
 
-        // serialize
+        //observable = observable.cache();
         // cache
         // observeOn
         // subscribeOn

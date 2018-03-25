@@ -17,10 +17,14 @@ public class UtilityOperatorsActivity extends AppCompatActivity {
         Observable observable = Observable.just(5, 3, 3, 2);
 
         // materialize
-        observable = observable.materialize();
+//         observable = observable.materialize();
 
         // dematerialize
+//        observable = observable.dematerialize();
+
         // timestamp
+//         observable = observable.timestamp();
+
         // serialize
         // cache
         // observeOn

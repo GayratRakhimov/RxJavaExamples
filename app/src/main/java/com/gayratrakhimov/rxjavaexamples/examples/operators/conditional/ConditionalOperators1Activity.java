@@ -23,18 +23,30 @@ public class ConditionalOperators1Activity extends AppCompatActivity {
 //        Observable observable3 = observable1.ambWith(observable2);
 
         // defaultIfEmpty
-        Observable observableEmpty = Observable.empty();
-        Observable observable3 = observableEmpty.defaultIfEmpty(6);
+//        Observable observableEmpty = Observable.empty();
+//        Observable observable3 = observableEmpty.defaultIfEmpty(6);
 
-        // doWhile
-        // ifThen
-        // skipUntil
         // skipWhile
-        // skipCase
-        // takeUntil
+//        Observable observable3 = observable1.skipWhile(new Predicate<Integer>() {
+//            @Override
+//            public boolean test(Integer i) throws Exception {
+//                return i < 5;
+//            }
+//        });
+
         // takeWhile
-        // takeWhileWithIndex
-        // whileDo
+//        Observable observable3 = observable1.takeWhile(new Predicate<Integer>() {
+//            @Override
+//            public boolean test(Integer i) throws Exception {
+//                return i < 5;
+//            }
+//        });
+
+        // skipUntil
+//        Observable observable3 = observable2.skipUntil(observable1.delay(3, TimeUnit.SECONDS));
+
+        // takeUntil
+        Observable observable3 = observable2.takeUntil(observable1.delay(3, TimeUnit.SECONDS));
 
         final Observer observer = new Observer() {
             @Override

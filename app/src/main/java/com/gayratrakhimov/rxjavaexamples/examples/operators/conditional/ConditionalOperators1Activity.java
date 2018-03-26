@@ -20,9 +20,12 @@ public class ConditionalOperators1Activity extends AppCompatActivity {
         final Observable observable2 = Observable.interval(1, TimeUnit.SECONDS);
 
         // amb
-        Observable observable3 = observable1.ambWith(observable2);
+//        Observable observable3 = observable1.ambWith(observable2);
 
         // defaultIfEmpty
+        Observable observableEmpty = Observable.empty();
+        Observable observable3 = observableEmpty.defaultIfEmpty(6);
+
         // doWhile
         // ifThen
         // skipUntil

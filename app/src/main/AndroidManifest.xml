@@ -15,7 +15,6 @@
         <activity android:name=".examples.operators.AsyncOperatorsActivity" />
         <activity android:name=".examples.operators.BlockingOperatorsActivity" />
         <activity android:name=".examples.operators.BooleanOperatorsActivity" />
-
         <activity android:name=".examples.operators.MathematicalOperatorsActivity" />
         <activity android:name=".examples.operators.StringOperatorsActivity" />
         <activity android:name=".examples.operators.transforming.TransformingOperators1Activity" />

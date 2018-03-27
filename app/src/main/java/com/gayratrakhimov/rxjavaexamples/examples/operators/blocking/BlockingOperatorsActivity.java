@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import io.reactivex.Observable;
+import io.reactivex.Single;
 import io.reactivex.functions.Consumer;
 
 public class BlockingOperatorsActivity extends AppCompatActivity {
@@ -16,14 +17,22 @@ public class BlockingOperatorsActivity extends AppCompatActivity {
         Observable observable1 = Observable.just(5,3,4,2);
         
         // forEach
-        observable1.forEach(new Consumer() {
+//        observable1.forEach(new Consumer() {
+//            @Override
+//            public void accept(Object o) throws Exception {
+//                Log.d("RxJavaTag", "accept:"+o);
+//            }
+//        });
+
+        // first
+        Single single = observable1.first(6);
+        single.subscribe(new Consumer() {
             @Override
             public void accept(Object o) throws Exception {
                 Log.d("RxJavaTag", "accept:"+o);
             }
         });
 
-        // first
         // firstOrDefault
         // last
         // lastOrDefault

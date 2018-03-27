@@ -8,8 +8,6 @@ public class AsyncOperatorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // *** ASYNC ***
         
         // start
         // toAsync or asyncAction or asyncFunc

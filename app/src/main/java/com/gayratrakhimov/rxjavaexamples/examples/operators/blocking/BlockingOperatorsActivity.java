@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import java.util.Iterator;
+
 import io.reactivex.Observable;
-import io.reactivex.Single;
-import io.reactivex.functions.Consumer;
 
 public class BlockingOperatorsActivity extends AppCompatActivity {
 
@@ -24,27 +24,12 @@ public class BlockingOperatorsActivity extends AppCompatActivity {
 //            }
 //        });
 
-        // first
-//        Single single = observable1.first(6);
-//        single.subscribe(new Consumer() {
-//            @Override
-//            public void accept(Object o) throws Exception {
-//                Log.d("RxJavaTag", "accept:"+o);
-//            }
-//        });
+        Iterable<Integer> iterable =observable1.blockingIterable();
+        Iterator<Integer> iterator = iterable.iterator();
+        while(iterator.hasNext()){
+            Log.d("RxJavaTag", iterator.next()+"");
+        }
 
-        // firstOrDefault
-        Single single = observable1.last(6);
-        single.subscribe(new Consumer() {
-            @Override
-            public void accept(Object o) throws Exception {
-                Log.d("RxJavaTag", "accept:"+o);
-            }
-        });
-
-        // last
-        // lastOrDefault
-        // mostRecent
         // next
         // latest
         // single

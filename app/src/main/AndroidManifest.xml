@@ -35,8 +35,10 @@
         <activity android:name=".examples.observable.ObservableActivity" />
         <activity android:name=".examples.observable.CompletableActivity" />
         <activity android:name=".examples.observable.MaybeActivity" />
-        <activity android:name=".examples.observable.SingleActivity"></activity>
+        <activity android:name=".examples.observable.SingleActivity" />
         <activity android:name=".examples.observable.FlowableActivity">
+        </activity>
+        <activity android:name=".examples.schedulers.SubscribeOnActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

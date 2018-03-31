@@ -29,9 +29,7 @@ public class FlowableActivity extends AppCompatActivity {
             }
         });
 
-        Flowable flowable = observable.toFlowable(BackpressureStrategy.MISSING);
-
-//        Observer observer = new Observer() {
+        //        Observer observer = new Observer() {
 //            @Override
 //            public void onSubscribe(Disposable d) {
 //                Log.d("RxJavaTag", "onSubscribe");
@@ -52,6 +50,10 @@ public class FlowableActivity extends AppCompatActivity {
 //                Log.d("RxJavaTag", "onComplete");
 //            }
 //        };
+
+//        observable.subscribe(observer);
+
+        Flowable flowable = observable.toFlowable(BackpressureStrategy.MISSING);
 
         flowable.subscribe(new Consumer() {
             @Override

@@ -4,9 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
+import io.reactivex.functions.Consumer;
 
 public class BlockingOperatorsActivity extends AppCompatActivity {
 
@@ -14,21 +15,30 @@ public class BlockingOperatorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Observable observable1 = Observable.just(5,3,4,2);
+        Observable observable = Observable.interval(1, TimeUnit.SECONDS).take(10);
         
         // forEach
-//        observable1.forEach(new Consumer() {
+//        observable.forEach(new Consumer() {
 //            @Override
 //            public void accept(Object o) throws Exception {
 //                Log.d("RxJavaTag", "accept:"+o);
 //            }
 //        });
 
-        Iterable<Integer> iterable =observable1.blockingIterable();
-        Iterator<Integer> iterator = iterable.iterator();
-        while(iterator.hasNext()){
-            Log.d("RxJavaTag", iterator.next()+"");
-        }
+        observable.blockingForEach(new Consumer() {
+            @Override
+            public void accept(Object o) throws Exception {
+                Log.d("RxJavaTag", "accept:"+o);
+            }
+        });
+
+        Log.d("RxJavaTag", "Test");
+
+//        Iterable<Integer> iterable =observable1.blockingIterable();
+//        Iterator<Integer> iterator = iterable.iterator();
+//        while(iterator.hasNext()){
+//            Log.d("RxJavaTag", iterator.next()+"");
+//        }
 
         // next
         // latest

@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".examples.introduction.SetupActivity" />
-        <activity android:name=".examples.introduction.ObservableObserverActivity" />
         <activity android:name=".examples.operators.creating.CreatingOperatorsActivity" />
         <activity android:name=".examples.operators.transforming.TransformingOperators1Activity" />
         <activity android:name=".examples.operators.transforming.TransformingOperators2Activity" />
@@ -34,9 +33,10 @@
         <activity android:name=".examples.operators.blocking.BlockingOperatorsActivity" />
         <activity android:name=".examples.schedulers.SchedulersActivity" />
         <activity android:name=".examples.observable.ObservableActivity" />
-        <activity android:name=".examples.observable.CompletableActivity"></activity>
+        <activity android:name=".examples.observable.CompletableActivity" />
         <activity android:name=".examples.observable.MaybeActivity" />
-        <activity android:name=".examples.observable.SingleActivity">
+        <activity android:name=".examples.observable.SingleActivity"></activity>
+        <activity android:name=".examples.observable.FlowableActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

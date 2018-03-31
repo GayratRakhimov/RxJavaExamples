@@ -31,14 +31,15 @@
         <activity android:name=".examples.operators.utility.UtilityOperators5Activity" />
         <activity android:name=".examples.operators.conditional.ConditionalOperators1Activity" />
         <activity android:name=".examples.operators.bool.BooleanOperatorsActivity" />
-        <activity android:name=".examples.operators.blocking.BlockingOperatorsActivity">
+        <activity android:name=".examples.operators.blocking.BlockingOperatorsActivity"></activity>
+        <activity android:name=".examples.schedulers.SchedulersActivity" />
+        <activity android:name=".examples.observable.ObservableActivity" />
+        <activity android:name=".examples.observable.CompletableActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".examples.schedulers.SchedulersActivity" />
-        <activity android:name=".examples.observable.ObservableActivity"></activity>
     </application>
 
 </manifest>

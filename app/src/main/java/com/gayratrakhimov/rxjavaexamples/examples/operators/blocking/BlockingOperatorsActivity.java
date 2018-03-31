@@ -7,7 +7,6 @@ import android.util.Log;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
-import io.reactivex.functions.Consumer;
 
 public class BlockingOperatorsActivity extends AppCompatActivity {
 
@@ -15,38 +14,44 @@ public class BlockingOperatorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Observable observable = Observable.interval(1, TimeUnit.SECONDS).take(10);
-        
-        // forEach
+        Observable observable = Observable.interval(1, TimeUnit.SECONDS).take(5);
+
+        // forEach vs blockingForEach
 //        observable.forEach(new Consumer() {
 //            @Override
 //            public void accept(Object o) throws Exception {
 //                Log.d("RxJavaTag", "accept:"+o);
 //            }
 //        });
+//        observable.blockingForEach(new Consumer() {
+//            @Override
+//            public void accept(Object o) throws Exception {
+//                Log.d("RxJavaTag", "accept:"+o);
+//            }
+//        });
 
-        observable.blockingForEach(new Consumer() {
-            @Override
-            public void accept(Object o) throws Exception {
-                Log.d("RxJavaTag", "accept:"+o);
-            }
-        });
-
-        Log.d("RxJavaTag", "Test");
-
-//        Iterable<Integer> iterable =observable1.blockingIterable();
+        //blockingIterable
+//        Iterable<Integer> iterable =observable.blockingIterable();
 //        Iterator<Integer> iterator = iterable.iterator();
 //        while(iterator.hasNext()){
 //            Log.d("RxJavaTag", iterator.next()+"");
 //        }
 
-        // next
-        // latest
-        // single
-        // singleOrDefault
-        // toFuture
-        // toIterable
-        // getIterator
+        // blockingNext
+//        Iterable<Integer> iterable = observable.blockingNext();
+//        Iterator<Integer> iterator = iterable.iterator();
+//        while (iterator.hasNext()) {
+//            Log.d("RxJavaTag", iterator.next() + "");
+//        }
+
+        // blockingLatest
+//        Iterable<Integer> iterable = observable.blockingLatest();
+//        Iterator<Integer> iterator = iterable.iterator();
+//        while (iterator.hasNext()) {
+//            Log.d("RxJavaTag", iterator.next() + "");
+//        }
+
+        Log.d("RxJavaTag", "Test");
 
     }
 }

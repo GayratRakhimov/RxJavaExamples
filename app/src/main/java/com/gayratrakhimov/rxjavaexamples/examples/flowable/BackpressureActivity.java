@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.gayratrakhimov.rxjavaexamples.R;
-
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
 import io.reactivex.Observable;
@@ -18,7 +16,6 @@ public class BackpressureActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_backpressure);
 
         Observable observable = Observable.create(new ObservableOnSubscribe() {
             @Override
@@ -39,7 +36,7 @@ public class BackpressureActivity extends AppCompatActivity {
 //        Flowable flowable = observable.toFlowable(BackpressureStrategy.LATEST);
 
         // BUFFER
-//        Flowable flowable = observable.toFlowable(BackpressureStrategy.BUFFER);
+        Flowable flowable = observable.toFlowable(BackpressureStrategy.BUFFER);
 
         flowable.subscribe(new Consumer() {
             @Override

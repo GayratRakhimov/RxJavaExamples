@@ -40,13 +40,15 @@
         <activity android:name=".examples.schedulers.SchedulersActivity" />
         <activity android:name=".examples.schedulers.ObserveOnActivity" />
         <activity android:name=".examples.disposable.DisposableActivity" />
-        <activity android:name=".examples.flowable.BackpressureActivity"></activity>
-        <activity android:name=".examples.introduction.pattern.ObserverPatternActivity">
+        <activity android:name=".examples.flowable.BackpressureActivity" />
+        <activity android:name=".examples.introduction.pattern.ObserverPatternActivity" />
+        <activity android:name=".examples.errorhandling.ErrorHandlingActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".examples.lifecycle.LifecycleActivity"/>
     </application>
 
 </manifest>

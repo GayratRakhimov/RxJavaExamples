@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gayratrakhimov.rxjavaexamples.examples.introduction.pattern.ObserverPatternActivity">
+    tools:context="com.gayratrakhimov.rxjavaexamples.examples.functional.FunctionalInterfacesActivity">
 
 </android.support.constraint.ConstraintLayout>

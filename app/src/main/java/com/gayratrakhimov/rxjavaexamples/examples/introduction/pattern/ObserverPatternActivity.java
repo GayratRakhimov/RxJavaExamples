@@ -3,8 +3,6 @@ package com.gayratrakhimov.rxjavaexamples.examples.introduction.pattern;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.gayratrakhimov.rxjavaexamples.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +11,6 @@ public class ObserverPatternActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_observer_pattern);
 
         // This example is taken from Java Design Patterns by Vaskaran Sarcar
 

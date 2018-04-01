@@ -7,7 +7,6 @@ import android.util.Log;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 
 public class SchedulersActivity extends AppCompatActivity {
 
@@ -39,7 +38,28 @@ public class SchedulersActivity extends AppCompatActivity {
             }
         };
 
-        observable = observable.subscribeOn(Schedulers.io());
+//        // single
+//        observable = observable.subscribeOn(Schedulers.single());
+//
+//        // trampoline
+//        observable = observable.subscribeOn(Schedulers.trampoline());
+
+//        // newThread
+//        observable = observable.subscribeOn(Schedulers.newThread());
+
+//        // io
+//        observable = observable.subscribeOn(Schedulers.io());
+
+//        // computation
+//        observable = observable.subscribeOn(Schedulers.computation());
+
+        // executor scheduler
+//        final ExecutorService executor = Executors.newFixedThreadPool(10);
+//        final Scheduler pooledScheduler = Schedulers.from(executor);
+//        observable = observable.subscribeOn(pooledScheduler);
+
+        // Android scheduler
+//        observable = observable.subscribeOn(AndroidSchedulers.mainThread());
 
         observable.subscribe(observer);
 

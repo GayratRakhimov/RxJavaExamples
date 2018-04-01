@@ -35,17 +35,17 @@
         <activity android:name=".examples.observable.CompletableActivity" />
         <activity android:name=".examples.observable.MaybeActivity" />
         <activity android:name=".examples.observable.SingleActivity" />
-        <activity android:name=".examples.observable.FlowableActivity" />
+        <activity android:name=".examples.flowable.FlowableActivity" />
         <activity android:name=".examples.schedulers.SubscribeOnActivity" />
-        <activity android:name=".examples.schedulers.SchedulersActivity">
+        <activity android:name=".examples.schedulers.SchedulersActivity"></activity>
+        <activity android:name=".examples.schedulers.ObserveOnActivity" />
+        <activity android:name=".examples.disposable.DisposableActivity" />
+        <activity android:name=".examples.flowable.BackpressureActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".examples.schedulers.ObserveOnActivity" />
-        <activity android:name=".examples.disposable.DisposableActivity"></activity>
     </application>
 
 </manifest>

@@ -44,7 +44,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".examples.schedulers.ObserveOnActivity"></activity>
+        <activity android:name=".examples.schedulers.ObserveOnActivity" />
+        <activity android:name=".examples.disposable.DisposableActivity"></activity>
     </application>
 
 </manifest>

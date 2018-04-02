@@ -25,7 +25,8 @@ public class ErrorHandlingActivity extends AppCompatActivity {
                 emitter.onNext("Marshmallow");
                 emitter.onNext("Nougat");
                 emitter.onNext("Oreo");
-                emitter.onError(new RuntimeException("Next version is not available"));
+//                emitter.onError(new Throwable("This is throwable"));
+                emitter.onError(new RuntimeException("This is runtime exception"));
                 emitter.onComplete();
             }
         });
@@ -54,8 +55,23 @@ public class ErrorHandlingActivity extends AppCompatActivity {
             }
         };
 
+        // onErrorReturn
+//        observable = observable.onErrorReturn(new Function() {
+//            @Override
+//            public Object apply(Object o) throws Exception {
+//                return "P";
+//            }
+//        });
+
+        // onErrorResumeNext
+        // throwable: yes
+        // runtime exception: yes
+//        observable = observable.onErrorResumeNext(observable2);
+
         // onExceptionResumeNext
-        observable = observable.onExceptionResumeNext(observable2);
+        // throwable: no
+        // runtime exception: yes
+//        observable = observable.onExceptionResumeNext(observable2);
 
         // subscribe
         observable.subscribe(observer);

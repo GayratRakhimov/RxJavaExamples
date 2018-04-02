@@ -4,20 +4,19 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.gayratrakhimov.rxjavaexamples.R;
-
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.plugins.RxJavaPlugins;
 
 public class ErrorHandlingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_error_handling);
 
         Observable observable = Observable.create(new ObservableOnSubscribe<String>() {
             @Override
@@ -63,6 +62,9 @@ public class ErrorHandlingActivity extends AppCompatActivity {
 //            }
 //        });
 
+        // onErrorReturnItem
+//        observable = observable.onErrorReturnItem("P");
+
         // onErrorResumeNext
         // throwable: yes
         // runtime exception: yes
@@ -73,9 +75,33 @@ public class ErrorHandlingActivity extends AppCompatActivity {
         // runtime exception: yes
 //        observable = observable.onExceptionResumeNext(observable2);
 
+        // retry
+//        observable = observable.retry(1);
+
+        // doOnError
+//        observable = observable.doOnError(new Consumer<Throwable>() {
+//            @Override
+//            public void accept(Throwable throwable) throws Exception {
+//                Log.d("RxJavaTag", "accept:"+throwable.toString());
+//            }
+//        });
+
+        // central handler
+//        observable = observable.doOnError(new ErrorHandler());
+
+        // RxJavaPlugins: not working :(
+        RxJavaPlugins.setErrorHandler(new ErrorHandler());
+
         // subscribe
         observable.subscribe(observer);
 
+    }
+
+    class ErrorHandler implements Consumer<Throwable> {
+        @Override
+        public void accept(Throwable throwable) throws Exception {
+            Log.d("RxJavaTag", "accept:"+throwable.toString());
+        }
     }
 
 }

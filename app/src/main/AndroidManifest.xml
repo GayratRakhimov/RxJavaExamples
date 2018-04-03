@@ -43,13 +43,13 @@
         <activity android:name=".examples.flowable.BackpressureActivity" />
         <activity android:name=".examples.introduction.pattern.ObserverPatternActivity" />
         <activity android:name=".examples.errorhandling.ErrorHandlingActivity"></activity>
-        <activity android:name=".examples.lifecycle.LifecycleActivity" />
-        <activity android:name=".examples.subject.SubjectActivity">
+        <activity android:name=".examples.lifecycle.LifecycleActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".examples.subject.SubjectActivity">
         </activity>
         <activity android:name=".examples.additional.LambdaActivity"></activity>
     </application>

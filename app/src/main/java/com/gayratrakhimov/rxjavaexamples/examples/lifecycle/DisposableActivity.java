@@ -1,4 +1,4 @@
-package com.gayratrakhimov.rxjavaexamples.examples.disposable;
+package com.gayratrakhimov.rxjavaexamples.examples.lifecycle;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -39,19 +39,20 @@
         <activity android:name=".examples.schedulers.SubscribeOnActivity" />
         <activity android:name=".examples.schedulers.SchedulersActivity" />
         <activity android:name=".examples.schedulers.ObserveOnActivity" />
-        <activity android:name=".examples.disposable.DisposableActivity" />
+        <activity android:name=".examples.lifecycle.DisposableActivity" />
         <activity android:name=".examples.flowable.BackpressureActivity" />
         <activity android:name=".examples.introduction.pattern.ObserverPatternActivity" />
-        <activity android:name=".examples.errorhandling.ErrorHandlingActivity"></activity>
-        <activity android:name=".examples.lifecycle.LifecycleActivity" >
+        <activity android:name=".examples.errorhandling.ErrorHandlingActivity" />
+        <activity android:name=".examples.lifecycle.LifecycleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".examples.subject.SubjectActivity">
-        </activity>
-        <activity android:name=".examples.additional.LambdaActivity"></activity>
+        <activity android:name=".examples.subject.SubjectActivity"></activity>
+        <activity android:name=".examples.additional.LambdaActivity" />
+        <activity android:name=".examples.lifecycle.MemoryLeakActivity"></activity>
     </application>
 
 </manifest>
